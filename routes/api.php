@@ -17,6 +17,7 @@ use App\Http\Controllers\DailyPlanController;
 use App\Http\Controllers\TaxReportController;
 use App\Http\Controllers\ExportController;
 use App\Http\Controllers\WebhookController;
+use App\Http\Controllers\AuditController;
 use App\Http\Controllers\BankController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\CustomerController;

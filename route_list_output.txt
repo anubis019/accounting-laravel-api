@@ -1,0 +1,171 @@
+
+  GET|HEAD        / ......................................... routes/web.php:5
+  GET|HEAD        api/accounting/accounts ... AccountingController@getAccounts
+  POST            api/accounting/accounts . AccountingController@createAccount
+  PUT             api/accounting/accounts/{id} AccountingController@updateAccGǪ
+  DELETE          api/accounting/accounts/{id} AccountingController@deleteAccGǪ
+  GET|HEAD        api/accounting/entries AccountingController@getJournalEntriGǪ
+  POST            api/accounting/entries AccountingController@createJournalEnGǪ
+  POST            api/accounting/entries/{id}/post AccountingController@postJGǪ
+  GET|HEAD        api/accounting/journals ... AccountingController@getJournals
+  POST            api/accounting/journals . AccountingController@createJournal
+  GET|HEAD        api/accounting/reports/balance-sheet AccountingController@bGǪ
+  GET|HEAD        api/accounting/reports/general-ledger AccountingController@GǪ
+  GET|HEAD        api/accounting/reports/trial-balance AccountingController@tGǪ
+  POST            api/accounting/setup-default-accounts AccountingController@GǪ
+  POST            api/ai/advice ....................... AIController@getAdvice
+  POST            api/ai/analyze ................ AIController@analyzeSpending
+  POST            api/ai/budget-suggestions ...... AIController@suggestBudgets
+  POST            api/ai/chat .............................. AIController@chat
+  GET|HEAD        api/ai/context ..................... AIController@getContext
+  GET|HEAD        api/ai/insights ................... AIController@getInsights
+  GET|HEAD        api/audit-logs ....................... AuditController@index
+  GET|HEAD        api/audit-logs/summary ............. AuditController@summary
+  GET|HEAD        api/bank/accounts ............... BankController@getAccounts
+  POST            api/bank/accounts ............. BankController@createAccount
+  PUT             api/bank/accounts/{id} ........ BankController@updateAccount
+  DELETE          api/bank/accounts/{id} ........ BankController@deleteAccount
+  POST            api/bank/accounts/{id}/import BankController@importStatement
+  POST            api/bank/accounts/{id}/reconcile .. BankController@reconcile
+  GET|HEAD        api/bank/accounts/{id}/reconciliation-status BankControllerGǪ
+  POST            api/bank/accounts/{id}/sync BankController@syncTransactions
+  GET|HEAD        api/bank/accounts/{id}/transactions BankController@getTransGǪ
+  POST            api/bank/match ............. BankController@matchTransaction
+  DELETE          api/bank/match/{id} ...... BankController@unmatchTransaction
+  GET|HEAD        api/budgets ......................... BudgetController@index
+  POST            api/budgets ......................... BudgetController@store
+  GET|HEAD        api/budgets/status ................. BudgetController@status
+  PUT             api/budgets/{id} ................... BudgetController@update
+  DELETE          api/budgets/{id} .................. BudgetController@destroy
+  GET|HEAD        api/categories ......... TransactionController@getCategories
+  POST            api/categories ........ TransactionController@createCategory
+  PUT             api/categories/{id} ... TransactionController@updateCategory
+  DELETE          api/categories/{id} ... TransactionController@deleteCategory
+  POST            api/change-password .......... AuthController@changePassword
+  GET|HEAD        api/customers ... customers.index GǦ CustomerController@index
+  POST            api/customers ... customers.store GǦ CustomerController@store
+  GET|HEAD        api/customers/{customer} customers.show GǦ CustomerControlleGǪ
+  PUT|PATCH       api/customers/{customer} customers.update GǦ CustomerControlGǪ
+  DELETE          api/customers/{customer} customers.destroy GǦ CustomerControGǪ
+  GET|HEAD        api/daily-plans daily-plans.index GǦ DailyPlanController@indGǪ
+  POST            api/daily-plans daily-plans.store GǦ DailyPlanController@stoGǪ
+  GET|HEAD        api/daily-plans/today ............ DailyPlanController@today
+  GET|HEAD        api/daily-plans/{daily_plan} daily-plans.show GǦ DailyPlanCoGǪ
+  PUT|PATCH       api/daily-plans/{daily_plan} daily-plans.update GǦ DailyPlanGǪ
+  DELETE          api/daily-plans/{daily_plan} daily-plans.destroy GǦ DailyPlaGǪ
+  POST            api/daily-plans/{id}/complete . DailyPlanController@complete
+  GET|HEAD        api/dashboard ................... ReportController@dashboard
+  POST            api/disable-2fa ............ AuthController@disableTwoFactor
+  POST            api/enable-2fa .............. AuthController@enableTwoFactor
+  GET|HEAD        api/export/budget-vs-actual ExportController@exportBudgetVsGǪ
+  GET|HEAD        api/export/products ........ ExportController@exportProducts
+  GET|HEAD        api/export/profit-loss ... ExportController@exportProfitLoss
+  GET|HEAD        api/export/transactions ExportController@exportTransactions
+  POST            api/forgot-password .......... AuthController@forgotPassword
+  GET|HEAD        api/health/dashboard . BusinessHealthController@getDashboard
+  GET|HEAD        api/health/history BusinessHealthController@getHistoricalScGǪ
+  GET|HEAD        api/health/recommendations BusinessHealthController@getRecoGǪ
+  POST            api/health/refresh ... BusinessHealthController@refreshScore
+  GET|HEAD        api/health/score .. BusinessHealthController@getCurrentScore
+  GET|HEAD        api/invoices ...... invoices.index GǦ InvoiceController@index
+  POST            api/invoices ...... invoices.store GǦ InvoiceController@store
+  POST            api/invoices/{id}/paid .......... InvoiceController@markPaid
+  GET|HEAD        api/invoices/{id}/pdf ........ InvoiceController@downloadPdf
+  POST            api/invoices/{id}/send .............. InvoiceController@send
+  GET|HEAD        api/invoices/{invoice} invoices.show GǦ InvoiceController@shGǪ
+  PUT|PATCH       api/invoices/{invoice} invoices.update GǦ InvoiceController@GǪ
+  DELETE          api/invoices/{invoice} invoices.destroy GǦ InvoiceControllerGǪ
+  POST            api/login ............................. AuthController@login
+  POST            api/logout ........................... AuthController@logout
+  GET|HEAD        api/low-stock ................... ProductController@lowStock
+  POST            api/mpesa/b2c ................... MpesaController@b2cPayment
+  POST            api/mpesa/b2c/result ............. MpesaController@b2cResult
+  POST            api/mpesa/b2c/timeout ........... MpesaController@b2cTimeout
+  GET|HEAD        api/mpesa/balance ........... MpesaController@accountBalance
+  POST            api/mpesa/c2b/confirmation . MpesaController@c2bConfirmation
+  POST            api/mpesa/c2b/validation ..... MpesaController@c2bValidation
+  POST            api/mpesa/callback ............. MpesaController@stkCallback
+  GET|HEAD        api/mpesa/status/{id} .......... MpesaController@checkStatus
+  POST            api/mpesa/stk-push ......... MpesaController@initiatePayment
+  GET|HEAD        api/mpesa/transactions ..... MpesaController@getTransactions
+  GET|HEAD        api/products ....................... ProductController@index
+  POST            api/products ....................... ProductController@store
+  GET|HEAD        api/products/{id} ................... ProductController@show
+  PUT             api/products/{id} ................. ProductController@update
+  DELETE          api/products/{id} ................ ProductController@destroy
+  POST            api/products/{id}/restock ........ ProductController@restock
+  POST            api/products/{id}/sell .............. ProductController@sell
+  GET|HEAD        api/profile ......................... AuthController@profile
+  PUT             api/profile ................... AuthController@updateProfile
+  GET|HEAD        api/profit-loss ........... TransactionController@profitLoss
+  POST            api/qr/generate/invoice/{invoiceId} QRCodeController@generaGǪ
+  POST            api/qr/generate/payment . QRCodeController@generatePaymentQR
+  POST            api/qr/generate/product/{productId} QRCodeController@generaGǪ
+  POST            api/qr/generate/store ..... QRCodeController@generateStoreQR
+  GET|HEAD        api/qr/my-codes .............. QRCodeController@getMyQRCodes
+  GET|HEAD        api/qr/stats ................... QRCodeController@getQRStats
+  DELETE          api/qr/{id} .................. QRCodeController@deactivateQR
+  GET|HEAD        api/qr/{id}/download ........... QRCodeController@downloadQR
+  GET|HEAD        api/receipts ....................... ReceiptController@index
+  POST            api/receipts/upload ............... ReceiptController@upload
+  DELETE          api/receipts/{id} ................ ReceiptController@destroy
+  GET|HEAD        api/receipts/{id}/download ...... ReceiptController@download
+  POST            api/refresh ......................... AuthController@refresh
+  POST            api/register ....................... AuthController@register
+  GET|HEAD        api/reports/cash-flow ............ ReportController@cashFlow
+  GET|HEAD        api/reports/expense-breakdown ReportController@expenseBreakGǪ
+  GET|HEAD        api/reports/profit-loss ........ ReportController@profitLoss
+  POST            api/reset-password ............ AuthController@resetPassword
+  GET|HEAD        api/savings-goals savings-goals.index GǦ SavingsGoalControllGǪ
+  POST            api/savings-goals savings-goals.store GǦ SavingsGoalControllGǪ
+  GET|HEAD        api/savings-goals/dashboard SavingsGoalController@dashboard
+  POST            api/savings-goals/{id}/contribute SavingsGoalController@addGǪ
+  GET|HEAD        api/savings-goals/{savings_goal} savings-goals.show GǦ SavinGǪ
+  PUT|PATCH       api/savings-goals/{savings_goal} savings-goals.update GǦ SavGǪ
+  DELETE          api/savings-goals/{savings_goal} savings-goals.destroy GǦ SaGǪ
+  POST            api/setup-2fa ................ AuthController@setupTwoFactor
+  GET|HEAD        api/suppliers ... suppliers.index GǦ SupplierController@index
+  POST            api/suppliers ... suppliers.store GǦ SupplierController@store
+  GET|HEAD        api/suppliers/{supplier} suppliers.show GǦ SupplierControlleGǪ
+  PUT|PATCH       api/suppliers/{supplier} suppliers.update GǦ SupplierControlGǪ
+  DELETE          api/suppliers/{supplier} suppliers.destroy GǦ SupplierControGǪ
+  GET|HEAD        api/tasks ............................. TaskController@index
+  POST            api/tasks ............................. TaskController@store
+  GET|HEAD        api/tasks/today ....................... TaskController@today
+  GET|HEAD        api/tasks/upcoming ................. TaskController@upcoming
+  PUT             api/tasks/{id} ....................... TaskController@update
+  DELETE          api/tasks/{id} ...................... TaskController@destroy
+  PUT             api/tasks/{id}/complete ............ TaskController@complete
+  GET|HEAD        api/tax-reports tax-reports.index GǦ TaxReportController@indGǪ
+  POST            api/tax-reports tax-reports.store GǦ TaxReportController@stoGǪ
+  POST            api/tax-reports/generate ...... TaxReportController@generate
+  GET|HEAD        api/tax-reports/summary ........ TaxReportController@summary
+  POST            api/tax-reports/{id}/submit ..... TaxReportController@submit
+  GET|HEAD        api/tax-reports/{tax_report} tax-reports.show GǦ TaxReportCoGǪ
+  PUT|PATCH       api/tax-reports/{tax_report} tax-reports.update GǦ TaxReportGǪ
+  DELETE          api/tax-reports/{tax_report} tax-reports.destroy GǦ TaxReporGǪ
+  GET|HEAD        api/test ................................ routes/api.php:221
+  GET|HEAD        api/transactions ............... TransactionController@index
+  POST            api/transactions ............... TransactionController@store
+  POST            api/transactions/bulk-delete TransactionController@bulkDeleGǪ
+  GET|HEAD        api/transactions/{id} ........... TransactionController@show
+  PUT             api/transactions/{id} ......... TransactionController@update
+  DELETE          api/transactions/{id} ........ TransactionController@destroy
+  POST            api/transactions/{id}/restore TransactionController@restore
+  POST            api/verify-email/{token} ........ AuthController@verifyEmail
+  GET|HEAD        api/webhooks ....................... WebhookController@index
+  POST            api/webhooks ....................... WebhookController@store
+  DELETE          api/webhooks/{id} ................ WebhookController@destroy
+  POST            api/webhooks/{id}/test .............. WebhookController@test
+  GET|HEAD        api/whatsapp/conversations WhatsAppController@getConversatiGǪ
+  GET|HEAD        api/whatsapp/conversations/{id}/messages WhatsAppControllerGǪ
+  POST            api/whatsapp/send ..... WhatsAppController@sendFromDashboard
+  GET|HEAD        api/whatsapp/webhook ............. WhatsAppController@verify
+  POST            api/whatsapp/webhook ............ WhatsAppController@webhook
+  GET|HEAD        storage/{path} storage.local GǦ vendor/laravel/framework/srcGǪ
+  PUT             storage/{path} storage.local.upload GǦ vendor/laravel/framewGǪ
+  GET|HEAD        up vendor/laravel/framework/src/Illuminate/Foundation/ConfiGǪ
+
+                                                          Showing [166] routes
+
+

@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'const API_URL = "https://your-backend.up.railway.app/api"/'),
 
     /*
     |--------------------------------------------------------------------------
