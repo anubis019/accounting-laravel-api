@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'KASH'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'const API_URL = "accounting-backend-production-101f.up.railway.app"/'),
+    'url' => env('APP_URL', 'https://accounting-backend-production-101f.up.railway.app'),
 
     /*
     |--------------------------------------------------------------------------
