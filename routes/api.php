@@ -223,3 +223,11 @@ Route::get('/test', function () {
         'message' => 'Backend is working!'
     ]);
 });
+use Illuminate\Support\Facades\Route;
+
+Route::get('/test', function () {
+    return response()->json([
+        'status' => 'success',
+        'message' => 'Backend connected successfully'
+    ]);
+});

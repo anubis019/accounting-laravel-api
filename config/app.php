@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'const API_URL = "https://your-backend.up.railway.app/api"/'),
+    'url' => env('APP_URL', 'const API_URL = "accounting-backend-production-101f.up.railway.app"/'),
 
     /*
     |--------------------------------------------------------------------------
