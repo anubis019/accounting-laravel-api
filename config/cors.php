@@ -75,7 +75,7 @@ return [
         'http://127.0.0.1:3000',
         'http://127.0.0.1:8000',
         'http://192.168.1.*',
-        'https://yourdomain.com',
+        'https://accounting-frontend-9sc3h1rqc-anubis019s-projects.vercel.app',
         'https://*.railway.app',
         'https://*.vercel.app',
         'https://*.netlify.app',
